@@ -9,8 +9,6 @@ function App() {
   const [categories, setCategories] = useState(CATEGORIES)
   const [selectedCategoryButton, setSelectedCategoryButton] = useState('All')
 
-
-
   function addNewItemtoList(newItem) {
     setTask([...task, newItem])
   }
@@ -18,7 +16,6 @@ function App() {
   function deletedItem(deletedItem) {
     setTask(task.filter((item) => item.text !== deletedItem))
   }
-
 
   const itemDisplayed = task
 
@@ -28,9 +25,6 @@ function App() {
         return selectedCategoryButton === item.category
       }
     )
-
-
-
 
   return (
     <div className="App">
